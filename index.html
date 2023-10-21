@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>OmaNettiSivu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script defer src="scripts.js"></script>
+
+</head>
+<body>
+    <section id="Etusivu" class="header">
+    <div id="header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#Etusivu">ETUSIVU</a></li>
+                    <li><a href="#Tietoja">TIETOJA</a></li>
+                    <li><a href="#Harrastukset">HARRASTUKSET</a></li>
+                    <li><a href="#Jotain">KOULUTUS</a></li>
+                    <li><a href="#Yhteystiedot">YHTEYSTIEDOT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+        
+        <div class="teksti-laatikko">
+            <h1>Santeri Anias</h1>
+            <p>
+                Tällä sivustolla tulette näkemään tämänhetkisen portfolioni, josta näette kuka minä olen, missä olen opiskellut, sekä mitä olen tehnyt.
+            </p>
+
+        </div>
+    </div>
+    </section>
+
+
+
+
+<!---- tietoja ---->
+
+<section id="Tietoja" class="Tietoja">
+    <h1>Kuka olen?</h1>
+
+    <div class="rivi">
+        <div class="tietoja-1">
+
+            <p> Olen alun perin keski-pohjanmaalta pikkukylästä, mutta asun tällä hetkellä Oulussa. Lukion jälkeen aloitin tietotekniikka opinnot Oulun ammattikorkea koulussa. Opintojen 
+                aikana kävin puolivuotta armeijassa.
+            </p>
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+<!---- harrastukset ---->
+
+<section id="Harrastukset" class="Harrastukset full-bleed">
+
+    <h1>Harrastukset</h1>
+
+
+    <div class="rivi">
+        <div class="harrastukset-1">
+            <h3>Video pelit</h3>
+            <p>Olen harrastanut video pelejä jo useamman vuoden.
+            </p>
+        </div>
+
+        <div class="harrastukset-1">
+            <h3>Kitara</h3>
+            <p>Kitaran soiton aloitin jo ylä asteella, mutta se on jääny aijan puuttessa vähän vähemmälle. Ennen kitaraa soitin harmonikkaa.
+            </p>
+        </div>
+
+        <div class="harrastukset-1">
+            <h3>Urheilu</h3>
+            <p>Urheilua olen harrastanut jo nuoresta asti. Käyn säännöllisesti lenkeillä ja kuntosalilla.
+            </p>
+        </div>
+
+
+
+    </div>
+ </div>
+</section>
+
+<!--- jotain --->
+
+<section id="Jotain" class="Jotain">
+    <h1>Koulutus</h1>
+    <p>Alla mainittu kaikki tämänhetkiset koulutukset.</p>
+
+    <div class="rivi">
+        <div class="jotain-1">
+           <img src="images/1.jpg">
+           <h3>Tämän hetkinen koulu</h3>
+            <p>Tällä hetkellä opiskelen Oulun ammattikorkeakoulussa tieto- ja viestintä tekniikkaa toista vuotta.</p>
+        </div>
+
+
+        <div class="jotain-1">
+          <img src="images/2.jpg">
+          <h3>Aikasemmat koulut</h3>
+          <p>Olen aikaisemmin käynyt lukion, josta valmistuin ylioppilaaksi vuonna 2022. </p>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+
+<section id="Yhteystiedot" class="footer">
+    <h4>Yhteystidot</h4>
+    <p>Mikäli haluatte työskennellä tai vain jutella kanssani, niin ottakaa yhteyttä.</p>
+</section>
+
+<button class="btn" data-modal-target="#modal">Sähköposti</button>
+<div class="modal" id="modal">
+  <div class="modal-header">
+    <div class="title">Sähköposti linkki</div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+    esimerkki@gmail.com
+  </div>
+</div>
+<div id="overlay"></div>
+
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<div class="container">
+    <div class="form-wrapper">
+      <h2 class="form-heading">Viesti</h2>
+      <form class="contact-form">
+        <input
+          type="text"
+          autocomplete="off"
+          placeholder="Nimi"
+          class="contact-form-input"
+        />
+        <input
+          type="email"
+          autocomplete="off"
+          placeholder="Email"
+          class="contact-form-input"
+        />
+        <input
+          type="text"
+          autocomplete="off"
+          placeholder="Aihe"
+          class="contact-form-input"
+        />
+        <textarea
+          class="contact-form-input contact-form-textarea"
+          placeholder="viesti"
+        ></textarea>
+        <input type="submit" class="form-submit-btn" value="Lähetä" />
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+
+
+</body>
+</html> 
